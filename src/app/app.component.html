@@ -1,10 +1,10 @@
 <div>
-  <h1>Data-Binding: </h1>
+  <h1>To Dos : </h1>
   <ul style="list-style-type: none;">
      <li *ngFor="let todo of todos">
        <input type="checkbox" [checked]="todo.completed" (change)="toggleTodoCompleted(todo)">
        <span>{{ todo.task }}</span>
-       <div *ngIf="todo.completed">'{{todo.task}}' task is completed
+       <div *ngIf="todo.completed">{{todo.task}} is completed
         <span *ngIf = "todo.completed">
           <!-- <li *ngFor="let venue of todo.venue"> -->
             <br>
