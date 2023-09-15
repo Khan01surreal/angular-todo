@@ -1,0 +1,19 @@
+<div>
+  <h1>Data-Binding: </h1>
+  <ul style="list-style-type: none;">
+     <li *ngFor="let todo of todos">
+       <input type="checkbox" [checked]="todo.completed" (change)="toggleTodoCompleted(todo)">
+       <span>{{ todo.task }}</span>
+       <div *ngIf="todo.completed">'{{todo.task}}' task is completed
+        <span *ngIf = "todo.completed">
+          <!-- <li *ngFor="let venue of todo.venue"> -->
+            <br>
+            {{todo.venue1}}
+            <br>
+            {{todo.venue2}}
+          <!-- </li> -->
+        </span>
+       </div>
+     </li>
+   </ul>
+</div>
